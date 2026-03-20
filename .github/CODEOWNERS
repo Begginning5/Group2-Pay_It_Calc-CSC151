@@ -8,7 +8,7 @@
 # Default owner for everything in the repository
 # Replace @your-username with your actual GitHub username
 # ---------------------------------------------------------
- @Begginning5
+* @Begginning5
 #* @EnterUsernameHere
 #* @EnterUsernameHere
 #* @EnterUsernameHere
@@ -19,18 +19,16 @@
 # ---------------------------------------------------------
 # Example: Ownership by directory
 # ---------------------------------------------------------
-#/src/ @
-/docs/ @Begginning5
-#/tests/ @
+#/alkearse/ @
+#/aschrader/ @Begginning5
+#/cethompson7/ @
+#/cfrederic/ @
+/cmobrien3/ @Begginning5
+/info_docs/ @Begginning5
+/.github/ @Begginning5
 
 # ---------------------------------------------------------
 # Example: Specific file types
-# ---------------------------------------------------------
-*.md @Begginning5
-
-
-# ---------------------------------------------------------
-# Example: Specific files
 # ---------------------------------------------------------
 README.md @Begginning5
 CODEOWNERS @Begginning5
@@ -38,5 +36,4 @@ CODEOWNERS @Begginning5
 # ---------------------------------------------------------
 # Example: If you add collaborators later
 # ---------------------------------------------------------
-# /api/ @Begginning5 @teammate
-# *.py @Begginning5 @backend-team
+# *.js @Begginning5 @backend-team
