@@ -1,0 +1,42 @@
+# List of Codeowners:
+
+# CODEOWNERS
+# This file tells GitHub who is responsible for which parts of the repository.
+# Owners are automatically requested for review when their owned files change.
+
+# ---------------------------------------------------------
+# Default owner for everything in the repository
+# Replace @your-username with your actual GitHub username
+# ---------------------------------------------------------
+* @Begginning5
+* @EnterUsernameHere!
+* @EnterUsernameHere!
+* @EnterUsernameHere!
+* @EnterUsernameHere!
+* @EnterUsernameHere!
+
+
+# ---------------------------------------------------------
+# Example: Ownership by directory
+# ---------------------------------------------------------
+/src/ @
+/docs/ @Begginning5
+/tests/ @
+
+# ---------------------------------------------------------
+# Example: Specific file types
+# ---------------------------------------------------------
+*.md @Begginning5
+
+
+# ---------------------------------------------------------
+# Example: Specific files
+# ---------------------------------------------------------
+README.md @Begginning5
+CODEOWNERS @Begginning5
+
+# ---------------------------------------------------------
+# Example: If you add collaborators later
+# ---------------------------------------------------------
+# /api/ @Begginning5 @teammate
+# *.py @Begginning5 @backend-team
