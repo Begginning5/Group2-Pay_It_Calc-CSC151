@@ -1,7 +1,4 @@
-// Contents of Group2_Formulas.js - previously User_Formulas.js
-// TODO: Please enter your username here:
-
-# Please Update your Username
+// Contents of Group2_Formulas.js 
 #===========================
 # Date:
 # Author:
