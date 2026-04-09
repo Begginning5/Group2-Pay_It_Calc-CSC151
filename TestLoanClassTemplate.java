@@ -42,7 +42,7 @@ public class TestLoanClassTemplate {
     System.out.println();
     extraPayEveryMonth(loan, extraPaymentAmount);
   }
-  
+  // (Aschrader)
   /** Extra payment first month only */
   public static void extraPayFirstMonth(Loan l, double extraPay) {
 	  System.out.printf("Extra payment only first month $%.2f%n", extraPay);
@@ -61,6 +61,7 @@ public class TestLoanClassTemplate {
 	  if (myLoanAmount < myMonthlyPayment) {
 		  // to do B1 same as B2
 	  }
+	  // (Aschrader)
 	  double interestSaved = l.getTotalInterest() - totalInterest;
 	  /*
 	  System.out.println("total interest " + totalInterest);
