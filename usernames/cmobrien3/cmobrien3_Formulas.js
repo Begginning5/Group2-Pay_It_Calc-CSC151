@@ -10,7 +10,6 @@
 
 // The bottom of the TestLoanClassTemplate.java -> are the formulas that need work. 
 // aschrader has already claimed the majority of the functions in the LoanTemplate.java.
-// I am going to switch my attention to completing the c program while my editor has decided to preference C
 
 
 function endOfClassMessage() {
