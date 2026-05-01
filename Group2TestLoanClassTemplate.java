@@ -6,6 +6,7 @@ import aschrader from "./usernames/aschrader/User_Formulas.js";
 import cethompson7 from "./usernames/cethompson7/User_Formulas.js";
 import cfrederic from "./usernames/cfrederic/User_Formulas.js";
 import cmobrien3 from "./usernames/cmobrien3/User_Formulas.js";
+import groupproject2026.TestLoanClassTemplate;
 
 
 public class TestLoanClassTemplate {
