@@ -11,7 +11,7 @@ package usernames.alkearse;
 public class alkearse {
 
     // -------------------------------
-    // Monthly Payment (Standard Loan)
+    // 1Function7: Monthly Payment (Standard Loan)
     // -------------------------------
     public double getMonthlyPayment(double loan, double rate, int years) {
         double monthlyRate = rate / 12.0 / 100.0;
@@ -22,7 +22,7 @@ public class alkearse {
     }
 
     // -------------------------------
-    // Extra Payment Every Month
+    // 2Function?: Extra Payment Every Month
     // -------------------------------
     public LoanResult loanExtra(double loan, double rate, int years, double extra) {
         double monthlyRate = rate / 12.0 / 100.0;
@@ -47,7 +47,7 @@ public class alkearse {
     }
 
     // -------------------------------
-    // Extra Payment Only in Month 1
+    // 3Function4: Extra Payment Only in Month 1
     // -------------------------------
     public LoanResult loanFirstMonthExtra(double loan, double rate, int years, double extra) {
         double monthlyRate = rate / 12.0 / 100.0;
@@ -78,7 +78,7 @@ public class alkearse {
     }
 
     // -------------------------------
-    // Extra Payment Class (Java cannot return JS objects)
+    // 4Function? Extra Payment Class (Java cannot return JS objects)
     // -------------------------------
     public static class LoanResult {
         public double interest;
