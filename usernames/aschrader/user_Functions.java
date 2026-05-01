@@ -1,130 +1,134 @@
+package usernames.aschrader;
+
 //===========================
 // Date: 04/09/2026
 // Author: aschrader
-// Second Author:
 // Function Name: User_Formulas
-// [Y/N] Approved? (cmobrien3):
 // Description: Loan payment calculator formulas including monthly payment,
 //              total payment, total interest, and extra payment calculations.
-//============================
-export const aschrader = {
-  //----------------------------
-  // Date: 04/23/2026
-  // Author: aschrader
-  // Description: Calculates the fixed monthly payment using the amortization formula.
-  //----------------------------
-  function getMonthlyPayment(loanAmount, annualInterestRate, numberOfYears) {
-    var monthlyInterestRate = annualInterestRate / 1200;
-   var monthlyPayment = loanAmount * monthlyInterestRate /
-     (1 - (1 / Math.pow(1 + monthlyInterestRate, numberOfYears * 12)));
-  return monthlyPayment;
-  }
+//===========================
 
-  //----------------------------
-  // Date: 04/23/2026
-  // Author: aschrader
-  // Description: Calculates total amount paid over the life of the loan.
-  //----------------------------
-  function getTotalPayment(loanAmount, annualInterestRate, numberOfYears) {
-    var monthlyPayment = getMonthlyPayment(loanAmount, annualInterestRate, numberOfYears);
-    var totalPayment = monthlyPayment * numberOfYears * 12;
-    return totalPayment;
-  }
+public class User_Formulas {
 
-  //----------------------------
-  // Date: 04/23/2026
-  // Author: aschrader
-  // Description: Calculates total interest paid. Total payment minus loan amount.
-  //----------------------------
-  function getTotalInterest(loanAmount, annualInterestRate, numberOfYears) {
-    var totalInterest = getTotalPayment(loanAmount, annualInterestRate, numberOfYears) - loanAmount;
-    return totalInterest;
-  }
-
-  //----------------------------
-  // Date: 04/09/2026
-  // Author: aschrader
-  // Description: Calculates total interest and months when an extra payment is made in the first month only.
-  //----------------------------
-  function extraPayFirstMonth(loanAmount, annualInterestRate, numberOfYears, extraPay) {
-    var monthlyInterestRate = annualInterestRate / 1200;
-    var monthlyPayment = getMonthlyPayment(loanAmount, annualInterestRate, numberOfYears);
-    var myLoanAmount = loanAmount;
-    var month = 0;
-    var interest = 0.0;
-    var principal = 0.0;
-    var totalInterest = 0.0;
-
-    // First month: apply extra payment
-    interest = myLoanAmount * monthlyInterestRate;
-    principal = monthlyPayment - interest;
-    myLoanAmount = myLoanAmount - principal - extraPay;
-    totalInterest += interest;
-    month++;
-
-    // A1: remaining months regular payment
-    while (myLoanAmount >= monthlyPayment) {
-      interest = myLoanAmount * monthlyInterestRate;
-      principal = monthlyPayment - interest;
-      myLoanAmount -= principal;
-      totalInterest += interest;
-      month++;
-    }
-    // B1: final partial month
-    if (myLoanAmount > 0 && myLoanAmount < monthlyPayment) {
-      interest = myLoanAmount * monthlyInterestRate;
-      totalInterest += interest;
-      month++;
+    //----------------------------
+    // Date: 04/23/2026
+    // Author: aschrader
+    // Description: Calculates the fixed monthly payment using the amortization formula.
+    //----------------------------
+    public static double getMonthlyPayment(double loanAmount, double annualInterestRate, int numberOfYears) {
+        double monthlyInterestRate = annualInterestRate / 1200.0;
+        return loanAmount * monthlyInterestRate /
+                (1 - (1 / Math.pow(1 + monthlyInterestRate, numberOfYears * 12)));
     }
 
-    var interestSaved = getTotalInterest(loanAmount, annualInterestRate, numberOfYears) - totalInterest;
-    console.log("Extra payment only first month $" + extraPay.toFixed(2));
-    console.log("Total interest $" + totalInterest.toFixed(2));
-    console.log("Total interest saved $" + interestSaved.toFixed(2));
-    console.log("Total months " + month);
-``}
-
-  //----------------------------
-  // Date: 04/09/2026
-  // Author: aschrader
-  // Description: Calculates total interest and months when an extra payment is made every month until the loan is paid off.
-  //----------------------------
-  function extraPayEveryMonth(loanAmount, annualInterestRate, numberOfYears, extraPay) {
-    var monthlyInterestRate = annualInterestRate / 1200;
-    var monthlyPayment = getMonthlyPayment(loanAmount, annualInterestRate, numberOfYears);
-    var myLoanAmount = loanAmount;
-    var month = 0;
-    var interest = 0.0;
-    var principal = 0.0;
-    var totalInterest = 0.0;
-
-    // A2: pay extra every month while loan is large enough
-    while (myLoanAmount >= (monthlyPayment + extraPay)) {
-      interest = myLoanAmount * monthlyInterestRate;
-      principal = monthlyPayment - interest;
-      myLoanAmount = myLoanAmount - principal - extraPay;
-      totalInterest += interest;
-      month++;
-    }
-    // B2: regular payment only, loan too small for extra
-    while (myLoanAmount >= monthlyPayment) {
-      interest = myLoanAmount * monthlyInterestRate;
-      principal = monthlyPayment - interest;
-      myLoanAmount -= principal;
-      totalInterest += interest;
-      month++;
-    }
-    // Final partial month
-    if (myLoanAmount > 0 && myLoanAmount < monthlyPayment) {
-      interest = myLoanAmount * monthlyInterestRate;
-      totalInterest += interest;
-      month++;
+    //----------------------------
+    // Date: 04/23/2026
+    // Author: aschrader
+    // Description: Calculates total amount paid over the life of the loan.
+    //----------------------------
+    public static double getTotalPayment(double loanAmount, double annualInterestRate, int numberOfYears) {
+        double monthlyPayment = getMonthlyPayment(loanAmount, annualInterestRate, numberOfYears);
+        return monthlyPayment * numberOfYears * 12;
     }
 
-    var interestSaved = getTotalInterest(loanAmount, annualInterestRate, numberOfYears) - totalInterest;
-    console.log("Extra payment every month $" + extraPay.toFixed(2));
-    console.log("Total interest $" + totalInterest.toFixed(2));
-    console.log("Total interest saved $" + interestSaved.toFixed(2));
-    console.log("Total months " + month);
-    }};
+    //----------------------------
+    // Date: 04/23/2026
+    // Author: aschrader
+    // Description: Calculates total interest paid.
+    //----------------------------
+    public static double getTotalInterest(double loanAmount, double annualInterestRate, int numberOfYears) {
+        return getTotalPayment(loanAmount, annualInterestRate, numberOfYears) - loanAmount;
+    }
 
+    //----------------------------
+    // Date: 04/09/2026
+    // Author: aschrader
+    // Description: Extra payment in the first month only.
+    //----------------------------
+    public static String extraPayFirstMonth(double loanAmount, double annualInterestRate, int numberOfYears, double extraPay) {
+
+        double monthlyInterestRate = annualInterestRate / 1200.0;
+        double monthlyPayment = getMonthlyPayment(loanAmount, annualInterestRate, numberOfYears);
+
+        double balance = loanAmount;
+        int month = 0;
+        double totalInterest = 0.0;
+
+        // First month with extra payment
+        double interest = balance * monthlyInterestRate;
+        double principal = monthlyPayment - interest;
+        balance = balance - principal - extraPay;
+        totalInterest += interest;
+        month++;
+
+        // Regular months
+        while (balance >= monthlyPayment) {
+            interest = balance * monthlyInterestRate;
+            principal = monthlyPayment - interest;
+            balance -= principal;
+            totalInterest += interest;
+            month++;
+        }
+
+        // Final partial month
+        if (balance > 0) {
+            interest = balance * monthlyInterestRate;
+            totalInterest += interest;
+            month++;
+        }
+
+        double interestSaved = getTotalInterest(loanAmount, annualInterestRate, numberOfYears) - totalInterest;
+
+        return "Extra payment only first month: $" + extraPay +
+               "\nTotal interest: $" + String.format("%.2f", totalInterest) +
+               "\nInterest saved: $" + String.format("%.2f", interestSaved) +
+               "\nTotal months: " + month;
+    }
+
+    //----------------------------
+    // Date: 04/09/2026
+    // Author: aschrader
+    // Description: Extra payment every month until loan is paid off.
+    //----------------------------
+    public static String extraPayEveryMonth(double loanAmount, double annualInterestRate, int numberOfYears, double extraPay) {
+
+        double monthlyInterestRate = annualInterestRate / 1200.0;
+        double monthlyPayment = getMonthlyPayment(loanAmount, annualInterestRate, numberOfYears);
+
+        double balance = loanAmount;
+        int month = 0;
+        double totalInterest = 0.0;
+
+        // Pay extra every month
+        while (balance >= (monthlyPayment + extraPay)) {
+            double interest = balance * monthlyInterestRate;
+            double principal = monthlyPayment - interest;
+            balance = balance - principal - extraPay;
+            totalInterest += interest;
+            month++;
+        }
+
+        // Regular payments only
+        while (balance >= monthlyPayment) {
+            double interest = balance * monthlyInterestRate;
+            double principal = monthlyPayment - interest;
+            balance -= principal;
+            totalInterest += interest;
+            month++;
+        }
+
+        // Final partial month
+        if (balance > 0) {
+            double interest = balance * monthlyInterestRate;
+            totalInterest += interest;
+            month++;
+        }
+
+        double interestSaved = getTotalInterest(loanAmount, annualInterestRate, numberOfYears) - totalInterest;
+
+        return "Extra payment every month: $" + extraPay +
+               "\nTotal interest: $" + String.format("%.2f", totalInterest) +
+               "\nInterest saved: $" + String.format("%.2f", interestSaved) +
+               "\nTotal months: " + month;
+    }
+}
