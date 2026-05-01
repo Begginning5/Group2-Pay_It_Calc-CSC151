@@ -3,7 +3,7 @@ package usernames.aschrader;
 //===========================
 // Date: 04/09/2026
 // Author: aschrader
-// Function Name: User_Formulas
+// Class Name: User_Formulas
 // Description: Loan payment calculator formulas including monthly payment,
 //              total payment, total interest, and extra payment calculations.
 //===========================
@@ -13,7 +13,7 @@ public class User_Formulas {
     //----------------------------
     // Date: 04/23/2026
     // Author: aschrader
-    // Description: Calculates the fixed monthly payment using the amortization formula.
+    // 1Function7: getMonthlyPayment()
     //----------------------------
     public static double getMonthlyPayment(double loanAmount, double annualInterestRate, int numberOfYears) {
         double monthlyInterestRate = annualInterestRate / 1200.0;
@@ -24,7 +24,7 @@ public class User_Formulas {
     //----------------------------
     // Date: 04/23/2026
     // Author: aschrader
-    // Description: Calculates total amount paid over the life of the loan.
+    // 2Function8: getTotalPayment()
     //----------------------------
     public static double getTotalPayment(double loanAmount, double annualInterestRate, int numberOfYears) {
         double monthlyPayment = getMonthlyPayment(loanAmount, annualInterestRate, numberOfYears);
@@ -34,7 +34,7 @@ public class User_Formulas {
     //----------------------------
     // Date: 04/23/2026
     // Author: aschrader
-    // Description: Calculates total interest paid.
+    // 3Function9: getTotalInterest()
     //----------------------------
     public static double getTotalInterest(double loanAmount, double annualInterestRate, int numberOfYears) {
         return getTotalPayment(loanAmount, annualInterestRate, numberOfYears) - loanAmount;
@@ -43,7 +43,7 @@ public class User_Formulas {
     //----------------------------
     // Date: 04/09/2026
     // Author: aschrader
-    // Description: Extra payment in the first month only.
+    // 4Function11: extraPayFirstMonth()
     //----------------------------
     public static String extraPayFirstMonth(double loanAmount, double annualInterestRate, int numberOfYears, double extraPay) {
 
@@ -88,7 +88,7 @@ public class User_Formulas {
     //----------------------------
     // Date: 04/09/2026
     // Author: aschrader
-    // Description: Extra payment every month until loan is paid off.
+    // 5Function12: extraPayEveryMonth
     //----------------------------
     public static String extraPayEveryMonth(double loanAmount, double annualInterestRate, int numberOfYears, double extraPay) {
 
