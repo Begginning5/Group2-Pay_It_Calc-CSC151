@@ -9,7 +9,10 @@ import cmobrien3 from "./usernames/cmobrien3/User_Formulas.js";
 // General Java import statements
 import java.util.Scanner;
 
-
+/*
+I will complete the rest of this code in VS studios if it runs I'll add it in
+my idea is that I need to reconstruct the main function in is file and implement the correct functions from the packages.
+*/
 
 
 <contents of the existing file>
