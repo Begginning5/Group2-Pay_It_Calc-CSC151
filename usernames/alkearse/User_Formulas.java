@@ -1,14 +1,14 @@
 alkearse 
 
-# alkearse
-#===========================
-# Date:
-# Author:
-# Second Author:
-# Function Name:
-# [Y/N] Approved? (alkearse);
-# Description:
-#============================
+// alkearse
+//===========================
+// Date:
+// Author:
+// Second Author:
+// Function Name:
+// [Y/N] Approved? (alkearse);
+// Description:
+//============================
 
 function endOfClassMessage() {
   console.log("Welcome to the end of the class.");
