@@ -52,10 +52,6 @@ public class TestLoanClassTemplate {
     extraPayEveryMonth(loan, extraPaymentAmount);
   }
   
-  //--------------------------------------------------
-  // This is the first insertion point
-  //---------------------------------------------------
-
   /** Extra payment first month only */
   	try {
   		// Build a class name dynamically
@@ -71,43 +67,6 @@ public class TestLoanClassTemplate {
 		// Catch the exception.
 	} catch (Exception e) {System.out.println("Could not find a method for that username.");}
 
-//--------------------------------------------------
-// This is the end of the first insertion point
-//--------------------------------------------------
-
-//   public static void extraPayFirstMonth(Loan l, double extraPay) {
-	//   System.out.printf("Extra payment only first month $%.2f%n", extraPay);
-	//   double myLoanAmount =l.getLoanAmount();
-	//   double myMonthlyInterestRate = l.getAnnualInterestRate()/1200;
-	//   double myMonthlyPayment = l.getMonthlyPayment();
-	//   int month= 0;
-	//   double interest = 0.0;
-	//   double principal = 0.0;
-	//   double totalInterest = 0.0;
-
-	//   while (myLoanAmount >= myMonthlyPayment) {
-//		  // to do A1 same as A2
-		  
-	//   }
-	//   if (myLoanAmount < myMonthlyPayment) {
-//		  // to do B1 same as B2
-	//   }
-
-	//   double interestSaved = l.getTotalInterest() - totalInterest;
-	//   /*
-	//   System.out.println("total interest " + totalInterest);
-	//   System.out.println("interest saved " + interestSaved);
-	//   System.out.println("total month " + month);
-	//   */
-	//   System.out.printf("Total interest $%.2f%nTotal interest saved $%.2f%nTotal months %d %n",
-			//   totalInterest, interestSaved, month);	  
-//   }
-
-  //--------------------------------------------------
-  // This is the second insertion point
-  //---------------------------------------------------
-
-  /** Extra payment first month only */
   	try {
   		// Build a class name dynamically
   		String className = "usernames." + username + ".User_Formulas";
@@ -121,63 +80,3 @@ public class TestLoanClassTemplate {
 		System.out.println("Result: " + result);
 		// Catch the exception.
 	} catch (Exception e) {System.out.println("Could not find a method for that username.");}
-
-//--------------------------------------------------
-// This is the end of the second insertion point
-//--------------------------------------------------
-
-//  /** Extra payment every month */
-//   public static void extraPayEveryMonth(Loan l, double extraPay) {
-	//   System.out.printf("Extra payment every month $%.2f%n", extraPay);
-	//   double myLoanAmount =l.getLoanAmount();
-	//   double myMonthlyInterestRate = l.getAnnualInterestRate()/1200;
-	//   double myMonthlyPayment = l.getMonthlyPayment();
-	//   int month= 0;
-	//   double interest = 0.0;
-	//   double principal = 0.0;
-	//   double totalInterest = 0.0;
-	  
-	//   while (myLoanAmount >= (myMonthlyPayment + extraPay)) {
-		//   to do A2 same as A1
-		  // caculate the new month's interest based on myLoanAmount and myMonthlyInterestRate
-		  // caculate the principal paid this month from myMonthlyPayment minus the new month's interest
-		  // caculate the new myLoanAmount after minus this month's principal, then minus extra payment
-		  // add the interest paid this month to totalInterest
-		  // increment the month count
-
-	//   }
-	//   while (myLoanAmount >= myMonthlyPayment) {
-		  // to do B2 same as B1
-		  // caculate the new month's interest based on myLoanAmount and myMonthlyInterestRate
-		  // caculate the principal paid this month from myMonthlyPayment minus the new month's interest
-		  // caculate the new myLoanAmount after minus this month's principal
-		  // add the interest paid this month to totalInterest
-		  // increment the month count
-	//   }
-	//   if (myLoanAmount < myMonthlyPayment) {
-		  // to do
-		  // caculate the new month's interest based on myLoanAmount and myMonthlyInterestRate
-		  // add the interest paid this month to totalInterest
-		  // increment the month count
-	//   }
-	//   double interestSaved = l.getTotalInterest() - totalInterest;
-	//   System.out.printf("Total interest $%.2f%nTotal interest saved $%.2f%nTotal months %d %n",
-			//   totalInterest, interestSaved, month);	  
-//   }
-// }
-/*
-Enter annual interest rate, for example, 8.25: 5.75
-Enter number of years as an integer: 15
-Enter loan amount, for example, 120000.95: 25000
-The loan was created on Sat Oct 21 08:29:24 EDT 2023
-The monthly payment is 207.60
-The total payment is 37368.45
-*/
-/*
-Enter annual interest rate, for example, 8.25: 5
-Enter number of years as an integer: 4
-Enter loan amount, for example, 120000.95: 20000
-The loan was created on Sun Nov 09 13:57:33 EST 2025
-The monthly payment is 460.59
-The total payment is 22108.12
-*/
