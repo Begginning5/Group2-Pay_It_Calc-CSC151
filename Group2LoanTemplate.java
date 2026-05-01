@@ -1,4 +1,4 @@
-package groupproject2025;
+package groupproject2026;
 // LiveExample 10.2
 public class LoanTemplate {
 	  private double annualInterestRate;
