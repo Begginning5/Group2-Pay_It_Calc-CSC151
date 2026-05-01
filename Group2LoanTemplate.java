@@ -22,49 +22,49 @@ public class LoanTemplate {
 	    loanDate = new java.util.Date();
 	  }
 	//-----------------------------------
-	// Function1:
+	// Function1: getAnnualInterestRate
 	//-----------------------------------
 	  /** Return annualInterestRate */
 	  public double getAnnualInterestRate() {
 	    return annualInterestRate;
 	  }
 	//------------------------------------
-	// Function2:
+	// Function2: setAnnualInterestRate
 	//------------------------------------
 	  /** Set a new annualInterestRate */
 	  public void setAnnualInterestRate(double annualInterestRate) {
 	    this.annualInterestRate = annualInterestRate;
 	  }
 	//-------------------------------------
-	// Function3:
+	// Function3: getNumberOfYears
 	//-------------------------------------
 	  /** Return numberOfYears */
 	  public int getNumberOfYears() {
 	    return numberOfYears;
 	  }
 	//-------------------------------------
-	// Function4:
+	// Function4: setNumberOfYears
 	//-------------------------------------
 	  /** Set a new numberOfYears */
 	  public void setNumberOfYears(int numberOfYears) {
 	    this.numberOfYears = numberOfYears;
 	  }
 	//---------------------------------------
-	// Function5:
+	// Function5: getLoanAmount
 	//---------------------------------------
 	  /** Return loanAmount */
 	  public double getLoanAmount() {
 	    return loanAmount;
 	  }
 	//---------------------------------------
-	// Function6:
+	// Function6: setLoanAmount
 	//---------------------------------------
 	  /** Set a newloanAmount */
 	  public void setLoanAmount(double loanAmount) {
 	    this.loanAmount = loanAmount;
 	  }
 	//---------------------------------------
-	// Function7:
+	// Function7: getMonthlyPayment
 	//---------------------------------------
 	  /** Find monthly payment */
 	  public double getMonthlyPayment() {
@@ -74,7 +74,7 @@ public class LoanTemplate {
 	    return monthlyPayment;    
 	  }
 	//-------------------------------------
-	// Function8:
+	// Function8: getTotalPayment
 	//-------------------------------------
 	  /** Find total payment */
 	  public double getTotalPayment() {
@@ -82,7 +82,7 @@ public class LoanTemplate {
 	    return totalPayment;    
 	  }
 	//-------------------------------------
-	// Function9:
+	// Function9: getTotalInterest
 	//-------------------------------------
 	  // 11/9
 	  /** Find total interest */
