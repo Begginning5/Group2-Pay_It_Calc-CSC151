@@ -1,11 +1,11 @@
 // Load the PROJECT TESTING PACKAGES
 import Fgroupproject2026.LoanTemplate;
 // USER Project Package
-import alkearse.alkerse;
-import aschrader.aschrader;
-import cethompson7.cethompson7;
-import cfrederic.cfrederic;
-import cmobrien3.cmobrien3;
+import alkearse_Functions.alkerse;
+import aschrader_Functions.aschrader;
+import cethompson7_Functions.cethompson7;
+import cfrederic_Functions.cfrederic;
+import cmobrien3_Functions.cmobrien3;
 // Load the USER FUNCTIONS FROM FILES
 //import usernames.alkearse.user_Functions.java;
 //import usernames.aschrader.user_Functions.java;
