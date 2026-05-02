@@ -65,7 +65,7 @@ public class TestLoanClassTemplate {
 	System.out.println("NEXT:");
 
   //------------------------------
-  // Function11: extraPayFirstMonth
+  // First Insert: Replaced Function 11
   //------------------------------
   /** Extra payment first month only */
 
@@ -84,7 +84,7 @@ public class TestLoanClassTemplate {
 	} catch (Exception e) {System.out.println("Could not find a method for that username.");}}
 	  
   //------------------------------
-  // Function12: extraPayEveryMonth
+  // Second Insert: Replaced Function 12
   //------------------------------
   	{try {
   		// Build a class name dynamically
