@@ -1,4 +1,4 @@
-package usernames.aschrader;
+package aschrader_Functions;
 
 //===========================
 // Date: 04/09/2026
@@ -8,7 +8,7 @@ package usernames.aschrader;
 //              total payment, total interest, and extra payment calculations.
 //===========================
 
-public class User_Formulas {
+public class aschrader {
 
     //----------------------------
     // Date: 04/23/2026
