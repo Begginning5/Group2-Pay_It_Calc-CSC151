@@ -1,4 +1,4 @@
-# cmobrien3
+package cmobrien3_Functions;
 #===========================
 # Date:
 # Author:
@@ -11,7 +11,7 @@
 // The bottom of the TestLoanClassTemplate.java -> are the formulas that need work. 
 // aschrader has already claimed the majority of the functions in the LoanTemplate.java.
 
-
-function endOfClassMessage() {
-  console.log("Welcome to the end of the class.");
-}
+public class cmobrien3{
+  function endOfClassMessage() {
+    console.log("Welcome to the end of the class.");
+  }};
