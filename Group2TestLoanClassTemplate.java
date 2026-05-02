@@ -21,13 +21,6 @@ public class TestLoanClassTemplate {
 	// Create a Scanner
     Scanner input = new Scanner(System.in);
 
-    System.out.println("Enter the username to run the user functions (alkearse, aschrader, cethompson7, cfrederic, cmobrien3): ");
-    System.out.println("To run the default functions enter Fgroupproject2026");
-    String username = input.nextLine().trim();
-    boolean runDefault = username.equals("Fgroupproject2026");
-    System.out.println();
-    System.out.println("NEXT:");
-
     // Enter yearly interest rate
     System.out.print("Enter annual interest rate, for example, 8.25: ");
     double annualInterestRate = input.nextDouble();
@@ -59,7 +52,18 @@ public class TestLoanClassTemplate {
     extraPayFirstMonth(loan, extraPaymentAmount);
     System.out.println();
     extraPayEveryMonth(loan, extraPaymentAmount);
-  
+	  
+  //------------------------------
+  // Implement User Functions
+  //------------------------------
+	System.out.println();
+	System.out.println("Enter the username to run the user functions (alkearse, aschrader, cethompson7, cfrederic, cmobrien3): ");
+    System.out.println("To run the default functions enter Fgroupproject2026");
+    String username = input.nextLine().trim();
+    boolean runDefault = username.equals("Fgroupproject2026");
+    System.out.println();
+	System.out.println("NEXT:");
+
   //------------------------------
   // Function11: extraPayFirstMonth
   //------------------------------
@@ -78,6 +82,7 @@ public class TestLoanClassTemplate {
 		  System.out.println("Result: " + result);
 		  // Catch the exception.
 	} catch (Exception e) {System.out.println("Could not find a method for that username.");}}
+	  
   //------------------------------
   // Function12: extraPayEveryMonth
   //------------------------------
